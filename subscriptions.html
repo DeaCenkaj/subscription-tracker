@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subscriptions - Subscription Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="st-header">
+    <div class="st-container">
+      <h1 class="st-title">Subscription Tracker</h1>
+      <p class="st-subtitle">All your subscriptions in one table.</p>
+      <nav class="st-nav" aria-label="Main">
+        <a class="st-nav-link" href="index.html">Home</a>
+        <a class="st-nav-link st-nav-link-active" href="subscriptions.html" aria-current="page">View subscriptions</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="st-container st-stack">
+
+    <!-- Section: Table -->
+    <section id="table-section" class="st-section" aria-labelledby="table-heading">
+      <h2 id="table-heading" class="st-heading">Your subscriptions</h2>
+      <div class="st-table-wrap">
+        <table class="st-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Provider</th>
+              <th>Subscriber</th>
+              <th>Renewal date</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="subscription-rows"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="st-empty">No subscriptions yet. Go to Home to add your first one.</p>
+    </section>
+
+  </main>
+
+  <script src="js-library.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
