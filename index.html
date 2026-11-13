@@ -11,6 +11,10 @@
     <div class="st-container">
       <h1 class="st-title">Subscription Tracker</h1>
       <p class="st-subtitle">Keep track of what you pay for and when it renews.</p>
+      <nav class="st-nav" aria-label="Main">
+        <a class="st-nav-link st-nav-link-active" href="index.html" aria-current="page">Home</a>
+        <a class="st-nav-link" href="subscriptions.html">View subscriptions</a>
+      </nav>
     </div>
   </header>
 
@@ -55,29 +59,7 @@
       <p id="form-error" class="st-error" role="alert" hidden></p>
     </section>
 
-    <!-- Section 2: Table -->
-    <section id="table-section" class="st-section" aria-labelledby="table-heading">
-      <h2 id="table-heading" class="st-heading">Your subscriptions</h2>
-      <div class="st-table-wrap">
-        <table class="st-table">
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Provider</th>
-              <th>Subscriber</th>
-              <th>Renewal date</th>
-              <th>Category</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="subscription-rows"></tbody>
-        </table>
-      </div>
-      <p id="empty-state" class="st-empty">No subscriptions yet. Add your first one above.</p>
-    </section>
-
-    <!-- Section 3: Summary -->
+    <!-- Section 2: Summary -->
     <section id="summary-section" class="st-section" aria-labelledby="summary-heading">
       <h2 id="summary-heading" class="st-heading">Summary</h2>
       <div class="st-grid st-grid-3">
@@ -95,6 +77,6 @@
   </main>
 
   <script src="js-library.js"></script>
- 
+  <script src="app.js"></script>
 </body>
 </html>
