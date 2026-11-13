@@ -117,13 +117,11 @@
     emptyEl.hidden = list.length > 0;
   }
 
-  function renderSummary(list) {
+    function renderSummary(list) {
     var s = summarize(list);
     document.getElementById("total-count").textContent = s.total;
     document.getElementById("expired-count").textContent = s.expired;
-    document.getElementById("active-count").textContent = s.active;
   }
-
   /* ---------- Public API ---------- */
 
   global.SubscriptionLib = {
