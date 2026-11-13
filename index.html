@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subscription Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="st-header">
+    <div class="st-container">
+      <h1 class="st-title">Subscription Tracker</h1>
+      <p class="st-subtitle">Keep track of what you pay for and when it renews.</p>
+    </div>
+  </header>
+
+  <main class="st-container st-stack">
+
+    <!-- Section 1: Summary -->
+    <section id="summary-section" class="st-section" aria-labelledby="summary-heading">
+      <h2 id="summary-heading" class="st-heading">Summary</h2>
+      <div class="st-grid st-grid-3">
+        <div class="st-stat">
+          <span class="st-stat-value" id="total-count">0</span>
+          <span class="st-stat-label">Total subscriptions</span>
+        </div>
+        <div class="st-stat st-stat-warn">
+          <span class="st-stat-value" id="expired-count">0</span>
+          <span class="st-stat-label">Expired subscriptions</span>
+        </div>
+        <div class="st-stat st-stat-ok">
+          <span class="st-stat-value" id="active-count">0</span>
+          <span class="st-stat-label">Active subscriptions</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Form -->
+    <section id="form-section" class="st-section" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="st-heading">Add a subscription</h2>
+      <form id="subscription-form" class="st-grid st-grid-form" novalidate>
+        <div class="st-field">
+          <label for="service">Service</label>
+          <input class="st-input" type="text" id="service" name="service" placeholder="Netflix" required>
+        </div>
+        <div class="st-field">
+          <label for="provider">Provider</label>
+          <input class="st-input" type="text" id="provider" name="provider" placeholder="Netflix Inc." required>
+        </div>
+        <div class="st-field">
+          <label for="subscriber">Subscriber</label>
+          <input class="st-input" type="text" id="subscriber" name="subscriber" placeholder="Your name" required>
+        </div>
+        <div class="st-field">
+          <label for="renewal">Renewal date</label>
+          <input class="st-input" type="date" id="renewal" name="renewal" required>
+        </div>
+        <div class="st-field">
+          <label for="category">Category</label>
+          <select class="st-input" id="category" name="category" required>
+            <option value="">Choose a category</option>
+            <option>Entertainment</option>
+            <option>Music</option>
+            <option>Software</option>
+            <option>Education</option>
+            <option>Cloud storage</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="st-field st-field-action">
+          <button type="submit" class="st-btn st-btn-primary">Add subscription</button>
+        </div>
+      </form>
+      <p id="form-error" class="st-error" role="alert" hidden></p>
+    </section>
+
+    <!-- Section 3: Table -->
+    <section id="table-section" class="st-section" aria-labelledby="table-heading">
+      <h2 id="table-heading" class="st-heading">Your subscriptions</h2>
+      <div class="st-table-wrap">
+        <table class="st-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Provider</th>
+              <th>Subscriber</th>
+              <th>Renewal date</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="subscription-rows"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="st-empty">No subscriptions yet. Add your first one above.</p>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
